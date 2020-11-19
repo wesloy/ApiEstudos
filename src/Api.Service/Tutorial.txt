@@ -1,0 +1,12 @@
+Como a camada SERVICE é a responsável pela comunicação entre as camadas, ela orquestra e aplica as regras de negócio, principalmente 
+da Infraestrutura com a camada da aplicação, se faz necessário referenciar as camadas que ela comunica, como:
+- Infraestrutura (todas suas divisões)
+- Domain
+Comandos:    
+    dotnet add .\Api.Service\ reference .\Api.Data\    
+    dotnet add .\Api.Service\ reference .\Api.Domain\
+
+
+Esta camada é uma "Extensão" da Domain e conecta os métodos da Domain com a Infra e tbm com Aplicação
+
+É aqui que colocamos as regras de negócios e validações.

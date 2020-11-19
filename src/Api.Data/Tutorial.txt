@@ -1,0 +1,9 @@
+Esta camada é uma divisão da camada de Infraestrutura (Modelo DDD) e trabalha com a comunicação
+direta com o BD. 
+Tem nela a string de comunicação com o BD (Context), tem os mapeamentos das tabelas (Mapping),
+fica registrada as migrações feitas no BD e também tem o Reposiório básico (Repository) que é
+herdado em outros Repositórios.
+
+Esta parte do projeto deve ter o registro da camada DOMAIN
+Comando: 
+    dotnet add .\Api.Data\ reference .\Api.Domain\

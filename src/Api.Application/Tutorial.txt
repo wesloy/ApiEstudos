@@ -1,0 +1,14 @@
+Aplicação é o ponto de saída para o usuário.
+É utilizado as Controllers para receber as rotas externas e direcionar ou para 
+Domain ou Service.
+
+Projeto da aplicação precisa referenciar as demais camaadas para que a interação 
+ocorra:
+    dotnet add .\Api.Application\ reference .\Api.Domain\
+    dotnet add .\Api.Application\ reference .\Api.Service\
+    dotnet add .\Api.Application\ reference .\Api.CrossCutting\
+
+
+As Controllers sempre devem ser criadas com a seguinte nomenclatura
+
+nome da tabela no plural com o sufixo Controllers (no plural)

@@ -1,0 +1,21 @@
+dotnet build
+    Recompilar e restaurar a aplicação
+
+dotnet restore
+    Restaurar aplicação
+
+dotnet new sln --name Api
+    Criando uma solução para "juntar" todos os projetos em uma aplicação única
+
+dotnet new webapi -n application -o Api.Application --no-https
+    Criando uma Web Api, nomeando e definindo a pasta, neste caso tirando o protocolo HTTPS
+
+dotnet sln add .\Api.Service\Service.csproj
+    Adicionar uma projeo a uma solução
+
+dotnet new classlib -n Service -f netcoreapp3.1 -o Api.Service
+    Criar uma nova classe, nomenado, definindo o sdk e criando uma pasta onde irá ficar
+
+
+Referenciar pastas
+    dotnet add .\Api.Data\ reference .\Api.Domain\

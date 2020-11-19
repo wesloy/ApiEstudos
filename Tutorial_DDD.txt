@@ -1,0 +1,44 @@
+### ESTRUTURA DDD ###
+
+Domain Driven Design (Projeto Orientado a Domínio)
+
+Vantagens:
+    >>> Alinhamento com o regra de negócio de forma simples e direta
+    >>> Facilita a reutilização de código
+    >>> Minimiza acoplamentos, usando de injestão de classes, facilitando manutenção futuras. Sendo necessário trocar apenas a interface.
+    >>> Pode ser usada com várias tecnologias diferentes (linguagens de programação)
+
+Camadas:
+    >>> Application
+    >>> Domain
+    >>> Service
+    >>> Infrastructure (Data / CrossCutting)
+
+Comunicação entre as camadas:
+    Application com: Domain e Service
+    Domain com: todas as camadas
+    Service com: todas as camadas
+    Infrastructure com: Service e Domain
+
+Organização das pastas:
+SRC será a pasta que irá conter toda a estruturação do projeto.
+Cada camada deve ter sua pasta separada, seguindo um padrão similar a este:
+    Api.Application
+    Api.CrossCutting (Infrastructure)
+    Api.Data (Infrastructure)
+    Api.Domain
+    Api.Service
+
+
+A Infrastructure é dividida em duas pastas, que possuem sua própria subdivisão:
+    Data
+        Context
+        Mapping
+        Repository
+    CrossCutting
+
+
+Elas para funcionar a transição de informação entre as camadas é necessário fazer
+as devidas referenciações de uma camada na outra, seguindo o fluxo de comunicação 
+entre elas. Cada referenciação está descrita nos tutorias das camadas.
+Porém todas as camadas devem ser refenciadas na solução (como se fosse o conteiner).

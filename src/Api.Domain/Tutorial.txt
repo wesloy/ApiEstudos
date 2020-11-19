@@ -1,0 +1,4 @@
+Camada de modelo de domínio: responsável por representar conceitos de negócios (trabalhando com a de Serviço), informações sobre a situação de negócios 
+e as regras de negócio, desenhando a solução mais pr
+O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. 
+Essa camada é a essência do software de negócios.

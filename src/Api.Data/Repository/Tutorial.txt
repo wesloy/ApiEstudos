@@ -1,0 +1,9 @@
+BaseRepository é genérica e servira para qualquer Entity e recebendo a INTERFACE
+IRepository, terá assinatura dependente da classe Interface.
+
+(CTOR) Um Construtor é necessário, usando injecção de dependência recebe o Context, 
+ou seja, a comunicação com o BD.
+Para segurança se cria variáveis reutilizáveis e apenas instanciadas dentro da classe
+BaseRepository.
+
+O <T> é uma nomenclatura genérica da Entity herdada, quando é chamada o BaseRepository.

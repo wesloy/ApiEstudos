@@ -1,0 +1,20 @@
+
+A classe CrossCutting se faz necessária para que a camada Api.Applicantion não tenha de referênciar
+a Api.Data, quebrando assim o fluxo do DDD.
+
+referencias usadadas na CrossCutting:
+    dotnet add .\Api.CrossCutting\ reference .\Api.Data\
+    dotnet add .\Api.CrossCutting\ reference .\Api.Service\  
+    dotnet add .\Api.CrossCutting\ reference .\Api.Domain\
+
+Nuget (nuget.com) que precisa instalar no CrossCutting.csproj
+    AutoMapper.Extensions.Microsoft.DependencyInjection
+
+Cria uma pasta dentro da Api.CrossCutting >>>>  DependencyInjection
+    Dentro desta pasta uma classe
+        ConfigureService (Detalhes na classe)
+        ConfigureRepository (Detalhes na classe)
+
+
+
+    

@@ -1,0 +1,5 @@
+Os ENTITIES represetam os campos das tabelas com suas configurações individuais.
+
+Para faciliar é criado uma BaseEntity, que possui os campos comuns de todas as
+tabelas do sistema e ela é herdada em cada Entity novo que é criado, não sendo
+necessário a repetição dos campos comuns em todas as novas Entiteis.

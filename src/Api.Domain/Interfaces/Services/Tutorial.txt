@@ -1,0 +1,17 @@
+Camada de INTERFACE, proporciona uma assinatura de métodos que é passada para as classes que 
+a implementa, facilitando a criação e também a padronização dos novos métodos, garantindo que
+esta nova classe tenha no MINIMO o que a INTERFACE possui.
+
+Camada SERVICE vai ser a camada de negócio, ela é a responsável por acionar ou não a camada
+da Infraestrutura (Data e CrossCutting).
+
+Para facilitar as manutenções é bom que cada uma das tabelas do sistema esteja representad
+por uma pasta separada.
+
+Já a classe IRepository ela proporciona a assinatura das funções principais a serem executadas
+no BD, como listar, deletar, atualizar e etc, o que for necessário para o sistema, herdando a
+classe BaseEntity (campos básicos que pertence a todas as tabelas do sistema).
+Ela trabalha de forma genérica, expresso pela função <T>.
+
+Nas Interfaces diretas das tabelas, se trabalha mais com os conceitos usados no HTML, como:
+GET, PUT, DELETE e POST.

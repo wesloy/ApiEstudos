@@ -1,0 +1,31 @@
+
+>>>>> Pacotes Entity FrameWork Core
+Os mais atualizadaos estão no site nuget.org
+Fica dentro do arquivo Data.csproj
+
+   dotnet add package Microsoft.EntityFrameworkCore.Tools --version 3.1.10
+   dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 3.1.10
+   dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.10
+   dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.0
+
+Depois de adicionado os pacotes e restaurada a aplicação deve entrar no pasta Data e 
+executar a instalação... com o comando:
+        dotnet tool install --global dotnet-ef --version 3.1.10
+para invocar a ferramenta 
+        dotnet ef
+
+
+Na pasta Api.CrossCutting é preciso um nuget de mapeamento das depencias
+    dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 6.1.1 (versão mais nova)
+
+
+Relação de criação das tabelas é:
+    01 - Entities
+    02 - Mapping
+    03 - MyContext
+
+Comandos:
+- Migração: Validar e fechar o pacote de alterações do banco de dados
+    dotnet ef migrations add FirstMigration
+- Database Update: Efetivar as migrações no banco de dados
+    dotnet ef database update
