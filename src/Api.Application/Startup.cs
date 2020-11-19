@@ -32,15 +32,6 @@ namespace application
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            /*  
-                //teste            
-                services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
-                services.AddTransient<IUserService, UserService>();
-                services.AddDbContext<MyContext>(
-                    options => options.UseSqlServer("Server=UDPCRPDB03;Database=db_Sentinella_Web;User Id=usr_sentinella;Password=#sdMr4@D3sk#;")
-                    ); 
-            */
-
             ConfigureService.ConfigureDependencieService(services);
             ConfigureRepository.ConfigureDependenciesRepository(services);
 
