@@ -25,7 +25,7 @@ namespace Api.CrossCutting.DependencyInjection
             //Singleton - Uma vez iniciado no servidor NUNCA muda.
 
             serviceCollection.AddDbContext<MyContext>(
-                options => options.UseSqlServer("Server=UDPCRPDB03;Database=db_Sentinella_Web;User Id=usr_sentinella;Password=#sdMr4@D3sk#;")
+                options => options.UseSqlServer("Server=#####;Database=db_Sentinella_Web;User Id=usr_sentinella;Password=#####;")
                );
 
         }
